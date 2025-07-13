@@ -49,11 +49,9 @@ export const useTodoStore = defineStore('todo', () => {
   }
 
   const clearAll = () => {
-    console.log('clearAll called, todos before:', todos.value)
     todos.value = []
     nextId.value = 1
-    console.log('clearAll completed, todos after:', todos.value)
-    console.log('todos length after clear:', todos.value.length)
+
   }
 
   const completedTodos = computed(() => 
